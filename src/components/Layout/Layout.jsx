@@ -1,17 +1,16 @@
-import { NavLink, Outlet } from "react-router-dom"
+import { Outlet } from "react-router-dom";
+import ResponsiveAppBar from "../Header/Header";
+import Footer from "../Footer/Footer";
 
 function Layout() {
   return (
-    <>
-      <header>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="About">About</NavLink>
-      </header>
+    <div className="app">
+      <ResponsiveAppBar />
 
       <Outlet />
 
-      <footer>this is footer</footer>
-    </>
+      <Footer />
+    </div>
   )
 }
 
