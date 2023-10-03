@@ -15,7 +15,6 @@ import AutoStories from '@mui/icons-material/AutoStories';
 
 import './Header.css'
 import { Link } from 'react-router-dom';
-import CustomNavLink from '../UI/CustomNavLink/CustomNavLink';
 
 const pages = [{ name: 'Home', route: '/' }, { name: 'About', route: '/about' }];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
