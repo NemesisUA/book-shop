@@ -15,6 +15,7 @@ import AutoStories from '@mui/icons-material/AutoStories';
 
 import './Header.css'
 import { Link, NavLink } from 'react-router-dom';
+import CustomNavLink from '../UI/CustomNavLink/CustomNavLink';
 
 const pages = [{ name: 'Home', route: '/' }, { name: 'About', route: '/about' }];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -42,7 +43,9 @@ function ResponsiveAppBar() {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AutoStories sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, fontSize: '32px' }} />
+          <Link to='/' style={{ textDecoration: 'none' }}>
+            <AutoStories sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, fontSize: '32px' }} />
+          </Link>
           <Link to='/' style={{ textDecoration: 'none' }}>
             <Typography
               variant="h4"
@@ -111,7 +114,7 @@ function ResponsiveAppBar() {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                <NavLink to={page.route} className='nav-link'>{page.name}</NavLink>
+                <CustomNavLink to={page.route}>{page.name}</CustomNavLink>
               </Button>
             ))}
           </Box>
